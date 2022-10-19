@@ -102,7 +102,7 @@
 
 
               <p>
-                In this work we solve a sub-problem of diagram based matching for doubt questions. For the non-diagram questions we rely on the power of OCRs & transformers
+                In this work we solved a sub-problem of diagram based matching for doubt questions. For the non-diagram questions we rely on the power of OCRs & transformers
                 to build strong text matching engines but for pure <b>reverse image search</b> we come-up with a diagram extraction & matching module which allowed us to prevent 
                 re-answering of the same question & reduce the redundancy of diagram based doubts from <b>9.5 lakh individual points</b> to <b>2.5 lakh clusters</b> 
                 in our database. We also use the SOTA, self supervised framework BYOL in this project because there are a lot of similar diagram images in our training set & utilising
@@ -172,7 +172,7 @@
                     made our system more generalized in nature, incase we encountered a previously unseen word. The out of vocabulary words cannot be handled by simple classification models.
                   </p>
                   <p>
-                    We make use of <b>112 words</b> & the videos for each of these words are processed according to the timestamp at which it is spoken. To further 
+                    We make use of <b>112 words</b> & the videos for each of these words are processed according to the timestamp at which they are spoken. To further 
                     improve the model performance, we make use of <a href = "https://pypi.org/project/dlib/">D-Lib facial features library</a> to extract only the 
                     lip region from these videos with some buffer. Also speaking speed normalisation is applied so that every word video would be 22 frames long in 
                     the <b>temporal dimension</b> so that the training data can be efficiently batched into tensors.
@@ -180,7 +180,7 @@
 
                   <p>
                     For baseline performance we repurpose <a href = "https://arxiv.org/abs/1611.01599">DeepMind's LipNet model</a> from sentence level to word level predictor & train 
-                    it from scratch on the LRW subset. To further model complex frame interactions & improve model explainability, we added 
+                    it from scratch on the LRW subset. To learn further complex frame interactions & improve model explainability, we added 
                     <a href="https://arxiv.org/abs/1409.0473">Bahdanau attention mechanism</a> in between the the 3D ConvNet encoder & GRU decoder which 
                     is depicted by the heatmap on the left. The final prediction is made by using <b>greedy CTC decoding techniques</b> in order to get a single character that was
                     scaled to multiple frames during the alignment learning. 
