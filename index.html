@@ -180,7 +180,7 @@
 
                   <p>
                     For baseline performance we repurpose <a href = "https://arxiv.org/abs/1611.01599">DeepMind's LipNet model</a> from sentence level to word level predictor & train 
-                    it from scratch on the LRW subset. To learn further complex frame interactions & improve model explainability, we added 
+                    it from scratch on the LRW subset. To learn further complex frame interactions & improve model explainability, we add 
                     <a href="https://arxiv.org/abs/1409.0473">Bahdanau attention mechanism</a> in between the the 3D ConvNet encoder & GRU decoder which 
                     is depicted by the heatmap on the left. The final prediction is made by using <b>greedy CTC decoding techniques</b> in order to get a single character that was
                     scaled to multiple frames during the alignment learning. 
