@@ -1,5 +1,1 @@
-## Project Description
-
-* [live example](https://learning-zone.github.io/website-templates/portfolio-item)
-
-![alt text](https://github.com/learning-zone/website-templates/blob/master/assets/portfolio-item.png "portfolio-item")
+This is the source code to Jon Barron's public academic website: https://jonbarron.info/. You are welcome to clone this code for your own personal use, just please attribute the source to the original website or to this repo. If you do clone this website, feel free to add an attribution link to your own downstream website in index.html if you want.
