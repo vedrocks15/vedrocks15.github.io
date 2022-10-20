@@ -35,7 +35,7 @@
 
               <p style="text-align:center">
                 <a href="mailto:vedrocks15@gmail.com">Email</a> &nbsp/&nbsp
-                <a href="data/phdVedantCV.pdf">CV</a> &nbsp/&nbsp
+                <a href="data/vedantPhdCV.pdf">CV</a> &nbsp/&nbsp
                 <a href="data/Resume_vedant_joshi.pdf">Resume</a> &nbsp/&nbsp
                 <a href="https://github.com/vedrocks15/">Github</a> &nbsp/&nbsp
                 <a href="https://www.linkedin.com/in/vedant-joshi-b822bb169/">LinkedIn</a> &nbsp/&nbsp
@@ -48,6 +48,9 @@
           </tr>
         </tbody></table>
         <br>
+        
+        
+      
         <hr style="width:50%">
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
@@ -57,8 +60,8 @@
                 <b>How to make machines think ? </b> <br>
                 Is the question that drives my research every morning. 
                 Based on this question, my fundamental goal is to understand the inner workings of deep models & make a sincere contribution 
-                towards building dynamic mechanisms as well as pathways that match the level of human intelligence by efficiently 
-                representing a multitude of input modalities into a single structured latent space that can handle diverse scenarios.
+                towards building dynamic as well as modular mechanisms that match the level of human intelligence by efficiently 
+                representing a multitude of input modalities into a single structured latent space & are contextually modifiable based on the situation at hand.
                 <br>
                 <br>
                 <b>Areas of Interest :</b>
@@ -77,6 +80,61 @@
           </tr>
         </tbody></table>
         <hr style="width:50%">
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+					<tr>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+                <heading>YZR-Net</heading><br>
+                <subheading><b>S</b>elf-supervised <b>H</b>idden representations <b>I</b>nvariant to <b>T</b>ransformations for profanity detection <b>[S.H.I.T]</b></subheading>
+              <br>
+              <br>
+              <strong>Vedant S. Joshi</strong>,
+              <a href="https://scholar.google.com/citations?user=ZFDbLisAAAAJ&hl=en">Dr. Sivanagaraja Tatinati</a>,
+							<a href="https://scholar.google.co.in/citations?user=bXXM7rMAAAAJ&hl=en">Dr. Yubo Wang</a> | 
+              <b>Publication In Works</b>
+              <br>
+              
+              <p>
+                In this new age of online learning students are still getting accustomed to virtual sessions. Watching recorded videos in the name of attending classes seems 
+                to be the trend followed by many EdTech players but at <b>Vedantu</b>, we understand the problems associated with such passive setups. Therefore we provide live classes 
+                where students can directly chat with their teachers as well as peers & enjoy the simulated experience of offline classes in an online world. The chatting framework is 
+                crucial to our platform for achieving an improved flow of information between the players involved. Sometimes certain <b>miscreants</b> in the class, 
+                use our chats framework to post certain insults or abusive language to disturb the decorum of the session. Posting ill intent messages that are directed 
+                towards another student, teacher, racial group or gender can foster the feeling of negativity in the mind of the receiver. Even though such situations 
+                occur rarely, they must be addressed instantaneously due to the magnitude of their impact on a student’s mind.
+              </p>
+
+              <img src="images/profanity.png" alt="paper diagrams" style="width:100%;max-width:100%">
+              <p>
+                Since students don't strictly adhere to syntax or grammatical rules in a chat environment, our solution needs to be invaraint to noisy substitues to a given word. 
+                Also there are scenarios where some creative players come-up with clever work arounds such as <b>self-censoring (f**k) or random character deletions (fck)</b> to fool
+                our detection system & still maintain the negative intent of the chat being posted on our platform.
+
+                <b>YZR-Net</b> is our NLP implementation of the image SSL framework <a href="https://arxiv.org/abs/2002.05709">SimCLR</a>. It is trained on a
+                multi-pair, instance discrimination objective for words & since we are using a dictionary of unique words we are 100% sure that the negative pairs being generated, 
+                are semantically
+                separate in nature.
+
+                For our NLP usecase the whole framework seemed ideal because we had an added challenge of profanity detection in the unstructured, 
+                transliterated language <b>Hinglish</b>. Due to lack of research or pre-trained models in Hinglish, we had to formulate our learning objective on word syntax instead of 
+                learning the loosely defined semantics of the language. Our final goal was to learn a structured latent space where representations
+                of profane words & their augmented counterparts are present in close proximity ( <b>metric : cosine similarity </b>).
+              </p>
+
+              <p>
+                Our system improved the baseline regex <b>recall by 10%</b> & the precision was maintained by using a false positive (<b>similar in syntax but different in semantics</b>) 
+                dictionary of non profane words which are removed in the pre-processing pipeline. The key achievement of our model is that now we have a compact dictionary of key profane tokens only & this dictionary can be 
+                updated without retraining the YZR-Net incase a new profane token is coined by our creative students ! The implementation is useful only when there is a profane token used 
+                in the chat & therefore as a part of version 2, we are working on <b>Heirarchial Atttention Networks</b> to capture cases where a complex combination of non profane tokens 
+                sends an ill intent message.
+              </p>
+
+            </td>	
+          </tr>	
+        </tbody></table>	
+        
+        <hr style="width:50%">
+
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 					<tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
@@ -104,10 +162,10 @@
               <p>
                 In this work we solved a sub-problem of diagram based matching for doubt questions. For the non-diagram questions we rely on the power of OCRs & transformers
                 to build strong text matching engines but for pure <b>reverse image search</b> we come-up with a diagram extraction & matching module which allowed us to prevent 
-                re-answering of the same question & reduce the redundancy of diagram based doubts from <b>9.5 lakh individual points</b> to <b>2.5 lakh clusters</b> 
-                in our database. We also use the SOTA, self supervised framework BYOL in this project because there are a lot of similar diagram images in our training set & utilising
+                re-answering of the same question & reduced the redundancy of diagram based doubts from <b>9.5 lakh individual points</b> to <b>2.5 lakh clusters</b> 
+                in our database. Our solution utilised the SOTA, self supervised framework BYOL in this project because there are a lot of similar diagram images in our training set & utilising
                 the <b>instance discrimination</b> objective in <a href="https://arxiv.org/abs/2002.05709">SimCLR</a> & <a href="https://arxiv.org/abs/1911.05722">MoCo</a> for 
-                negative pairs had a high chance of pushing away the latent representations of 2 semantically relevant diagram images thereby affecting our top-k search scores.
+                negative pairs had a high chance of pushing away the latent representations of 2 semantically relevant diagram images thereby affecting our top-5 matching scores.
               </p>
             </td>	
           </tr>	
@@ -126,7 +184,7 @@
                   input query.
                 </p>
                 <p>
-                  The diagrams on the right show the improved convergance of our models along with stronger clustering abilities along the diagonals of <b>image 
+                  The diagrams on the right show the improved convergance of our models with stronger clustering abilities along the diagonals of <b>image 
                   similarity matrices</b>. In order to deploy the model, the vectors computed by our <b>Custom BYOL</b> were searched using approximate K-NN algorithms such 
                   as <a href="https://arxiv.org/abs/1603.09320">Heirarchial Navigable Small Worlds (HNSW)</a> & the search space was reduced by 
                   performing clustering on the vectors using <a href="https://arxiv.org/abs/1802.03426">UMAP</a> & <a href="https://arxiv.org/abs/1911.02282">HDBSCAN</a>. Each
@@ -135,6 +193,7 @@
             </td>
           </tr>
         </tbody></table>	
+        
         <hr style="width:50%">
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 					<tr>
@@ -172,15 +231,15 @@
                     made our system more generalized in nature, incase we encountered a previously unseen word. The out of vocabulary words cannot be handled by simple classification models.
                   </p>
                   <p>
-                    We make use of <b>112 words</b> & the videos for each of these words are processed according to the timestamp at which they are spoken. To further 
-                    improve the model performance, we make use of <a href = "https://pypi.org/project/dlib/">D-Lib facial features library</a> to extract only the 
-                    lip region from these videos with some buffer. Also speaking speed normalisation is applied so that every word video would be 22 frames long in 
-                    the <b>temporal dimension</b> so that the training data can be efficiently batched into tensors.
+                    We train the model on <b>112 words</b> & the videos for each of them are processed according to the timestamp at which they are spoken. To further 
+                    ease the task of learning in <b>spatial domain</b>, we make use of <a href = "https://pypi.org/project/dlib/">D-Lib facial features library</a> to extract only the 
+                    lip region from these videos with some buffer. Also speaking speed normalisation is applied so that every video would be 22 frames long in 
+                    the <b>temporal dimension</b> & support efficient batching of training data into tensors.
                   </p>
 
                   <p>
-                    For baseline performance we repurpose <a href = "https://arxiv.org/abs/1611.01599">DeepMind's LipNet model</a> from sentence level to word level predictor & train 
-                    it from scratch on the LRW subset. To learn further complex frame interactions & improve model explainability, we add 
+                    For baseline performance we repurposed <a href = "https://arxiv.org/abs/1611.01599">DeepMind's LipNet model</a> from sentence level to word level predictor & train 
+                    it from scratch on the LRW subset. To learn complex frame interactions & improve model explainability, we added 
                     <a href="https://arxiv.org/abs/1409.0473">Bahdanau attention mechanism</a> in between the the 3D ConvNet encoder & GRU decoder which 
                     is depicted by the heatmap on the left. The final prediction is made by using <b>greedy CTC decoding techniques</b> in order to get a single character that was 
                      scaled to multiple frames during the alignment learning. 
@@ -221,21 +280,21 @@
               <p>
               Owing to the landscape & natural conditions, <b>coconut</b> is an important fruit in Kerala. Coconut farms are an important aspect
               of the state's economy therefore a lot of citizen's livelihood is dependent on this fruit. Plucking coconuts from plam trees is a huge 
-              challenge since it involves scaling large heights without proper equipment which could lead to serious injuries for the daily wage
+              challenge since it involves scaling large heights & without proper equipment, it could lead to serious injuries for the daily wage
               workers. Inspired by this, I started to work on my Honours degree thesis project <b>Coco-Layers</b>.
               </p>
               <p>
                 The whole project was divided into 2 modules : 
                 <ul>
                   <li><b>Hardware :</b> Building of an autonomous drone with flight stabilization for curation of a novel
-                    coconuts dataset which captured variances in real world lighting conditions, multiple scales at which coconuts occur in wild & 
+                    coconut dataset which captured variances in real world lighting conditions, multiple scales at which coconuts occur in wild & 
                     possible hindrances that could confuse the overall detection system.</li>
                     <br>
                   <li><b>Software : </b> On board object detecion module that supported edge based real time inference without loosing detection accuracy.</li>
                 </ul>
 
-              We experimented on <b>Nvidia Jetson Nano</b> & <b>Raspberry Pi 3b+</b> using <b>Nvidia tensor RT</b> and <b>Tensorflow lite quantisation</b> kits for reducing model resource
-              consumption. To further push the limits, a frame buffer handling mechanism was written in OpenCV to reduce the calls to main memory for achieving faster frame
+              We experimented on <b>Nvidia Jetson Nano</b> & <b>Raspberry Pi 3b+</b> using <b>Nvidia tensor RT</b> and <b>Tensorflow lite quantisation</b> kits for reducing 
+              model resource consumption. To further push the limits, a frame buffer handling mechanism was written in OpenCV to reduce the calls to main memory for achieving faster frame
               processing rates. The peak accuracy achieved in the study was <b>0.4 mean average precision</b> with a <b>22 FPS</b> detection rate 
               (using a <a href="https://arxiv.org/abs/2004.10934">Tiny YOLOv4</a>) in real time flight. The downside
               of fast processing was reduced flight time from <b>12 minutes to 6 minutes</b> which was kept as a goal to improve in the next phase.
