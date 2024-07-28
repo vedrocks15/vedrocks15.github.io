@@ -20,7 +20,9 @@
               <p style="text-align:center">
                 <name>Vedant S. Joshi</name>
               </p>
-              <p>Hi, I am a first year Masters in CSE student at UC-San Diego. My research interest lies in improving the generalisation & training 
+              <p>Hi, I am a second year Masters in CSE student at UC-San Diego. Currently I am interning in the Video Engineering Team at <b>Apple</b> where 
+                I am advised by Javier Movellan and Manjot Singh Bilkhu. My work lies in the domain of bridging the gap between vision and language
+                modalities for achieveing robust Vision-Language models. My research interest lies in improving the generalisation & training 
                 efficiency of computer vision models.
                 <br>
                 <br>
@@ -65,7 +67,7 @@
             <td style="padding:20px;width:100%;vertical-align:middle">
               <heading>Research</heading>
               <p>
-                <b>How to make machines understand ? </b> <br>
+                <b>How to make machines percieve the world ? </b> <br>
                 Is the question that drives my research every morning. 
                 Based on this question, my fundamental goal is to understand the inner workings of deep learning models & make a sincere contribution 
                 towards building dynamic as well as modular mechanisms that match the level of human intelligence by efficiently 
@@ -77,18 +79,54 @@
                 <b>Areas of Interest :</b>
               <ul>
                 <li>Representational learning</li>
+                <li>Multimodal LLMs</li>
                 <li>Self-supervised learning</li>
                 <li>Building multi-modal latent spaces</li>
                 <li>Open World Learning</li>
                 <li>Reflectance Models</li>
                 <li>Model quantization & pruning</li>
-                <li> Model explainability & interpretability</li>
+                <li>Model explainability & interpretability</li>
               </ul>
 
               </p>
             </td>
           </tr>
         </tbody></table>
+        <hr style="width:50%">
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+					<tr>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+                <heading>Attention Splat</heading><br>
+                <subheading>3d Scene Editing</subheading>
+              <br>
+              <br>
+              <strong>Vedant S. Joshi</strong>,
+              <a href="https://cseweb.ucsd.edu/~mkchandraker/">Prof. Manmohan Chandrekar</a> | 
+              <a href="https://drive.google.com/file/d/1-i93HD7-0GWLZy2zp6YIqJwnZG-H6eoR/view">Project</a>, 2024
+              <br>
+              
+              <p>
+                3D Gaussian Splatting (3DGS) represents the state-of-the-art in 3D scene reconstruction, functioning by 
+                projecting 3D Gaussians onto 2D camera planes and rasterizing images. Recently, 3DGS has been adapted to various tasks
+                beyond simple 3D scene reconstruction, tasks that were previously explored using Neural Radiance Fields (NeRFs).
+                These tasks include 3D object segmentation, scene relighting, and modeling in-the-wild scenes, often requiring the
+                addition of feature vectors to points in 3D space, as represented implicitly by NeRFs. Recent work has focused on
+                attaching extra feature vectors to these Gaussians as optimization parameters to hold additional information. 
+              </p>
+              <img src="images/demo.gif" alt="paper diagrams" style="width:100%;max-width:100%">
+              <p>
+                However, the optimization of these features occurs in the 2D image space after rasterization. While this approach allows
+                faithful updating and optimization of features, we believe it lacks 3D awareness. Our goal is to improve the quality of feature vectors 
+                learnt in each gaussian by making them aware of their local & global neighbourhood. We propose contextualization of vectors 
+                via self-attention in the explicit 3D representation via local & global transformers. Our initial experiments highlight several 
+                implementation challenges associated with introducing the computationally expensive O(n2) 
+                self-attention mechanism. We provide solutions to address these challenges and demonstrate the effectiveness of our approach.
+              </p>
+            </td>	
+          </tr>	
+        </tbody></table>
+
         <hr style="width:50%">
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
